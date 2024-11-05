@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "some-unique-id",
+    "name": "API ePayco Virtual Wallet Documentation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register Client",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"document\": \"1234567890\",\n    \"name\": \"José Luis Marín Rangel\",\n    \"email\": \"marinrangeljl@example.com\",\n    \"phone\": \"554777275122\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/clients/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "clients", "register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Balance",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"document\": \"1234567890\",\n    \"phone\": \"554777275122\",\n    \"amount\": 50.00\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/clients/add-balance",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "clients", "add-balance"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pay",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"document\": \"1234567890\",\n    \"phone\": \"554777275122\",\n    \"amount\": 20.00\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/clients/pay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "clients", "pay"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Confirm Payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sessionId\": \"session_1234567890\",\n    \"token\": \"123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/clients/confirm-payment",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "clients", "confirm-payment"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Check Balance",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3002/api/clients/check-balance?document=1234567890&phone=554777275122",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "clients", "check-balance"],
+          "query": [
+            {
+              "key": "document",
+              "value": "1234567890"
+            },
+            {
+              "key": "phone",
+              "value": "554777275122"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
