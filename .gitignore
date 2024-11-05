@@ -1,0 +1,6 @@
+backend/service-api/node_modules/*
+backend/service-db/node_modules/*
+backend/service-api/package-lock.json
+backend/service-db/package-lock.json
+frontend/node_modules/*
+frontend/package-lock.json
